@@ -21,7 +21,11 @@ class ProspectsController < ApplicationController
     @prospect.update(prospect_params)
     respond_with(@prospect)
   end 
-
+  def destroy
+    @prospect = Prospect.find_by(:id => params[:id])
+    @prospect.destroy
+    respond_with(@prospect)
+  end
 private
 def prospect_params
   return params.require(:prospect).permit(:first_name,:last_name,:team,:rank,:position)
