@@ -1,1 +1,1 @@
-json.(@prospect, :first_name, :last_name, :team, :rank, :position)
+json.(@prospect, :id,:first_name, :last_name, :team, :rank, :position)
